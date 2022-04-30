@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "projet-angular-pokedex-app": {
+      "hosting": {
+        "projet_angular_pokedex_app": [
+          "projet-angular-pokedex-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "projet-angular-pokedex-app"
+  }
+}

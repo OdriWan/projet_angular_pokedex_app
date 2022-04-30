@@ -1,0 +1,54 @@
+<p>pokemon-list works!</p>
+
+{{ pokemon$ | async | json }}
+
+<table mat-table [dataSource]="pokemon$" class="mat-elevation-z8">
+  <!-- Name Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.id }}
+      {{ setId(element.id) }}
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="talent">
+    <th mat-header-cell *matHeaderCellDef>Talent</th>
+    <td mat-cell *matCellDef="let element">{{ element.talent }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef>Type</th>
+    <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="showPokemonDetails(row)"
+    class="clickable"
+  ></tr>
+</table>
+
+<br />
+
+<button mat-raised-button color="primary" (click)="createPokemon()">
+  Create
+</button>
+
+<br />

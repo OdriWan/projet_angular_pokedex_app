@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://lp-dim-api-ag.herokuapp.com',
+  apiBaseUrl: 'https://projet-angular-pokedex-api.herokuapp.com',
 };
